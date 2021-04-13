@@ -4,6 +4,7 @@
 #include <ctype.h>
 #include <math.h>
 float obj_prostopadloscianu();
+float obj_ostroslupa();
 
 
 int main()
@@ -30,7 +31,7 @@ obj_prostopadloscianu();
 break;
 
 case '2':
-
+obj_ostroslupa();
 
     printf("\n");
 
@@ -94,6 +95,45 @@ float obj_prostopadloscianu()
     else
 
    printf("wprowadz liczby, a nie znaki\n");
+    exit (EXIT_FAILURE);
+
+
+};
+float obj_ostroslupa()
+{
+    float a, h, wynik;
+    float potega_podstawy;
+    float wykladnik = 2;
+    printf("wprowadz a\n");
+    if(scanf("%f", &a) == 1)
+    {
+        printf("wprowadz h\n");
+        if(scanf("%f", &h) == 1)
+        {
+
+
+            if ((a<=0) || (h<=0))
+            {
+            printf("a i h musza byc wieksze od 0\n");
+            exit (EXIT_FAILURE);
+
+            }
+
+            else
+
+            potega_podstawy = powf(a,wykladnik);
+            wynik =(1.0/3.0)*potega_podstawy*h;
+            printf("wynik= ""%.4f", wynik);
+            return wynik;
+        }
+        else
+        printf("wprowadz liczby, a nie znaki\n");
+        exit (EXIT_FAILURE);
+
+    }
+    else
+
+    printf("wprowadz liczby, a nie znaki\n");
     exit (EXIT_FAILURE);
 
 
